@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="task_tracker_view_form">
+            <field name="model">project.work.tracker</field>
+            <field name="type">form</field>
+            <field name="name">task_tracker_form</field>
+        </record>
+        <record model="ir.ui.view" id="task_tracker_view_list">
+            <field name="model">project.work.tracker</field>
+            <field name="type">tree</field>
+            <field name="name">task_tracker_list</field>
+        </record>
+        <record model="ir.ui.view" id="work_view_form">
+            <field name="model">project.work</field>
+            <field name="inherit" ref="project.work_view_form"/>
+            <field name="name">work_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="work_view_list">
+            <field name="model">project.work</field>
+            <field name="inherit" ref="project.work_view_list2"/>
+            <field name="name">work_view_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_task_tracker">
+            <field name="name">Task Tracker</field>
+            <field name="res_model">project.work.tracker</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_task_tracker_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="task_tracker_view_list"/>
+            <field name="act_window" ref="act_task_tracker"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_task_tracker_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="task_tracker_view_form"/>
+            <field name="act_window" ref="act_task_tracker"/>
+        </record>
+        <record model="ir.model.access" id="access_task_tracker">
+            <field name="model" search="[('model', '=', 'project.work.tracker')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_task_tracker_admin">
+            <field name="model" search="[('model', '=', 'project.work.tracker')]"/>
+            <field name="group" ref="project.group_project_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <!-- Menus -->
+            <menuitem action="act_task_tracker" id="menu_task_tracker" 
+                parent="project.menu_configuration" 
+                sequence="10" name="Task Type"/>
+
+          <record model="ir.ui.menu-res.group" id="menu_group_task_tracker">
+            <field name="menu" ref="menu_task_tracker"/>
+            <field name="group" ref="project.group_project_admin"/>
+          </record>
+          
+    </data>
+</tryton>
