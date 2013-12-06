@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tryton>
     <data>
-
         <record model="ir.ui.view" id="task_tracker_view_form">
             <field name="model">project.work.tracker</field>
             <field name="type">form</field>
@@ -61,6 +60,5 @@
             <field name="menu" ref="menu_task_tracker"/>
             <field name="group" ref="project.group_project_admin"/>
           </record>
-          
     </data>
 </tryton>
