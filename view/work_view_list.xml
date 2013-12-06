@@ -3,8 +3,7 @@
 this repository contains the full copyright notices and license terms. -->
 
 <data>
-    <xpath expr="/tree/field[@name='work']" position="before">
+    <xpath expr="/tree" position="inside">
         <field name="tracker"/>
     </xpath>
 </data>
-
