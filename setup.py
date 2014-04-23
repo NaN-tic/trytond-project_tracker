@@ -6,7 +6,7 @@ import re
 import os
 import ConfigParser
 
-MODULE = 'task_tracker'
+MODULE = 'project_tracker'
 PREFIX = 'nantic'
 MODULE2PREFIX = {}
 

@@ -8,4 +8,4 @@ def register():
     Pool.register(
         WorkType,
         Work,
-        module='task_tracker', type_='model')
+        module='project_tracker', type_='model')

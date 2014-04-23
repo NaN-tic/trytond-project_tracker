@@ -22,13 +22,13 @@ class TestCase(unittest.TestCase):
     '''
 
     def setUp(self):
-        trytond.tests.test_tryton.install_module('task_tracker')
+        trytond.tests.test_tryton.install_module('project_tracker')
 
     def test0005views(self):
         '''
         Test views.
         '''
-        test_view('task_tracker')
+        test_view('project_tracker')
 
     def test0006depends(self):
         '''
