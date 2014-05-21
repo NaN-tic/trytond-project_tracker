@@ -3,9 +3,9 @@
 this repository contains the full copyright notices and license terms. -->
 
 <data>
-    <xpath expr="/form/field[@name='party_address']" position="after">
+    <xpath expr="/form/field[@name='party']" position="after">
         <label name="tracker"/>
         <field name="tracker"/>
     </xpath>
 </data>
-    
+
