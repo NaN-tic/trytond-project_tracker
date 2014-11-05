@@ -7,9 +7,7 @@ from trytond.tests.test_tryton import test_view, test_depends
 
 
 class TestCase(unittest.TestCase):
-    '''
-    Test module.
-    '''
+    'Test module'
 
     def setUp(self):
         trytond.tests.test_tryton.install_module('project_tracker')
