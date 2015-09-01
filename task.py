@@ -15,6 +15,11 @@ class WorkType(ModelSQL, ModelView):
     name = fields.Char('Name', required=True, select=True)
     comment = fields.Text('comment')
     group = fields.Many2One('res.group', 'User Group')
+    active = fields.Boolean('Active')
+
+    @staticmethod
+    def default_active():
+        return True
 
 
 class Work:

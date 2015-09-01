@@ -6,6 +6,8 @@
     <field name="name"/>
     <label name="group"/>
     <field name="group"/>
-    <separator name="comment" colspan="4"/>
+    <label name="active"/>
+    <field name="active"/>
+    <separator name="Comment" id="comment" colspan="4"/>
     <field name="comment" colspan="4"/>
 </form>

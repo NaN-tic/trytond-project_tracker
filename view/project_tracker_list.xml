@@ -4,4 +4,5 @@
 <tree string="Tracker">
     <field name="name"/>
     <field name="group"/>
+    <field name="active" tree_invisible="1"/>
 </tree>
