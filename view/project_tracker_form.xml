@@ -8,6 +8,6 @@
     <field name="active"/>
     <label name="group"/>
     <field name="group"/>
-    <separator name="Comment" colspan="4"/>
+    <separator string="Comment" id="comment" colspan="4"/>
     <field name="comment" colspan="4"/>
 </form>
