@@ -52,8 +52,8 @@
         </record>
 
         <!-- Menus -->
-            <menuitem action="act_project_tracker" id="menu_project_tracker" 
-                parent="project.menu_configuration" 
+            <menuitem action="act_project_tracker" id="menu_project_tracker"
+                parent="project.menu_configuration"
                 sequence="10" name="Task Type"/>
 
           <record model="ir.ui.menu-res.group" id="menu_group_project_tracker">

@@ -4,6 +4,8 @@
 <form string="Tracker">
     <label name="name"/>
     <field name="name"/>
+    <label name="group"/>
+    <field name="group"/>
     <separator name="comment" colspan="4"/>
     <field name="comment" colspan="4"/>
 </form>

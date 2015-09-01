@@ -3,4 +3,5 @@
      copyright notices and license terms. -->
 <tree string="Tracker">
     <field name="name"/>
+    <field name="group"/>
 </tree>
