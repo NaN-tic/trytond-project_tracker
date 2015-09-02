@@ -25,8 +25,9 @@ class WorkType(ModelSQL, ModelView):
 class Work:
     __name__ = 'project.work'
 
-    tracker = fields.Many2One('project.work.tracker', 'Tracker', required=True,
-        depends=['type'])
+    tracker = fields.Many2One('project.work.tracker', 'Tracker', states={
+            'required': Eval('type') == 'task',
+            }, depends=['type'])
 
     @classmethod
     def __setup__(cls):
