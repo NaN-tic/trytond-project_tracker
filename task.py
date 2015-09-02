@@ -3,6 +3,7 @@
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
+from trytond.pyson import Eval
 
 __all__ = ['WorkType', 'Work']
 __metaclass__ = PoolMeta
