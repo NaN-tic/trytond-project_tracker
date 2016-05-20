@@ -1,0 +1,75 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:project.work:"
+msgid ""
+"You do not have permissions for setting tracker \"%(tracker)s\" on a task "
+"\"%(task)s\"."
+msgstr ""
+"No dispossa de permissos per establir \"%(tracker)s\" a la tasca "
+"\"%(task)s\"."
+
+msgctxt "field:project.work,tracker:"
+msgid "Tracker"
+msgstr "Tracker"
+
+msgctxt "field:project.work.tracker,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:project.work.tracker,comment:"
+msgid "comment"
+msgstr "comentari"
+
+msgctxt "field:project.work.tracker,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:project.work.tracker,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:project.work.tracker,group:"
+msgid "User Group"
+msgstr "Grup usuari"
+
+msgctxt "field:project.work.tracker,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.work.tracker,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work.tracker,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work.tracker,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:project.work.tracker,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "model:ir.action,name:act_project_tracker"
+msgid "Project Tracker"
+msgstr "Projecte Tracker"
+
+msgctxt "model:ir.ui.menu,name:menu_project_tracker"
+msgid "Trackers"
+msgstr "Trackers"
+
+msgctxt "model:project.work.tracker,name:"
+msgid "Task Tracker"
+msgstr "Tasca Tracker"
+
+msgctxt "view:project.work.tracker:"
+msgid "Comment"
+msgstr "Comentari"
+
+msgctxt "view:project.work.tracker:"
+msgid "Tracker"
+msgstr "Tracker"
