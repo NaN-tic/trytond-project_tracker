@@ -6,7 +6,6 @@ from trytond.transaction import Transaction
 from trytond.pyson import Eval
 
 __all__ = ['WorkType', 'Work']
-__metaclass__ = PoolMeta
 
 
 class WorkType(ModelSQL, ModelView):
@@ -24,6 +23,7 @@ class WorkType(ModelSQL, ModelView):
 
 
 class Work:
+    __metaclass__ = PoolMeta
     __name__ = 'project.work'
 
     tracker = fields.Many2One('project.work.tracker', 'Tracker', states={
