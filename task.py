@@ -5,14 +5,14 @@ from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
 from trytond.pyson import Eval
 
-__all__ = ['WorkType', 'Work']
+__all__ = ['WorkTracker', 'Work']
 
 
-class WorkType(ModelSQL, ModelView):
+class WorkTracker(ModelSQL, ModelView):
     'Task Tracker'
     __name__ = 'project.work.tracker'
 
-    name = fields.Char('Name', required=True, select=True)
+    name = fields.Char('Name', required=True, translate=True, select=True)
     comment = fields.Text('comment')
     group = fields.Many2One('res.group', 'User Group')
     active = fields.Boolean('Active')
