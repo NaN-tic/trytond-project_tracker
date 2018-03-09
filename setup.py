@@ -10,7 +10,7 @@ try:
 except ImportError:
     from ConfigParser import ConfigParser
 
-MODULE = 'zz'
+MODULE = 'project_tracker'
 PREFIX = 'nantic'
 MODULE2PREFIX = {}
 
