@@ -22,8 +22,7 @@ class WorkTracker(ModelSQL, ModelView):
         return True
 
 
-class Work:
-    __metaclass__ = PoolMeta
+class Work(metaclass=PoolMeta):
     __name__ = 'project.work'
 
     tracker = fields.Many2One('project.work.tracker', 'Tracker', states={
