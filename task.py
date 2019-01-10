@@ -4,6 +4,8 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
 from trytond.pyson import Eval
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['WorkTracker', 'Work']
 
@@ -28,14 +30,6 @@ class Work(metaclass=PoolMeta):
     tracker = fields.Many2One('project.work.tracker', 'Tracker', states={
             'required': Eval('type') == 'task',
             }, depends=['type'])
-
-    @classmethod
-    def __setup__(cls):
-        super(Work, cls).__setup__()
-        cls._error_messages.update({
-                'invalid_user_tracker': ('You do not have permissions for '
-                    'setting tracker "%(tracker)s" on a task "%(task)s".'),
-                })
 
     @classmethod
     def create(cls, vlist):
@@ -64,7 +58,6 @@ class Work(metaclass=PoolMeta):
             if not group:
                 continue
             if user not in [x.id for x in group.users]:
-                cls.raise_user_error('invalid_user_tracker', {
-                        'tracker': record.tracker.rec_name,
-                        'task': record.rec_name,
-                        })
+                raise UserError(gettext('project_tracker.invalid_user_tracker',
+                        tracker=record.tracker.rec_name,
+                        task=record.rec_name))
