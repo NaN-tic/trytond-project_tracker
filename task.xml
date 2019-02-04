@@ -23,6 +23,11 @@
             <field name="inherit" ref="project.work_view_list_simple"/>
             <field name="name">work_view_list</field>
         </record>
+        <record model="ir.ui.view" id="work_view_list">
+            <field name="model">project.work</field>
+	    <field name="inherit" ref="project.work_view_list"/>
+            <field name="name">work_list</field>
+        </record>
         <record model="ir.action.act_window" id="act_project_tracker">
             <field name="name">Project Tracker</field>
             <field name="res_model">project.work.tracker</field>
