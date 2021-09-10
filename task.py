@@ -1,6 +1,6 @@
 #This file is part of Tryton.  The COPYRIGHT file at the top level of
 #this repository contains the full copyright notices and license terms.
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import ModelView, ModelSQL, DeactivableMixin, fields
 from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
 from trytond.pyson import Eval
@@ -10,18 +10,13 @@ from trytond.exceptions import UserError
 __all__ = ['WorkTracker', 'Work']
 
 
-class WorkTracker(ModelSQL, ModelView):
+class WorkTracker(DeactivableMixin, ModelSQL, ModelView):
     'Task Tracker'
     __name__ = 'project.work.tracker'
 
     name = fields.Char('Name', required=True, translate=True, select=True)
     comment = fields.Text('comment')
     group = fields.Many2One('res.group', 'User Group')
-    active = fields.Boolean('Active')
-
-    @staticmethod
-    def default_active():
-        return True
 
 
 class Work(metaclass=PoolMeta):
