@@ -14,7 +14,7 @@ class WorkTracker(DeactivableMixin, ModelSQL, ModelView):
     'Task Tracker'
     __name__ = 'project.work.tracker'
 
-    name = fields.Char('Name', required=True, translate=True, select=True)
+    name = fields.Char('Name', required=True, translate=True)
     comment = fields.Text('comment')
     group = fields.Many2One('res.group', 'User Group')
 
