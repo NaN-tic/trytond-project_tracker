@@ -24,7 +24,7 @@ class Work(metaclass=PoolMeta):
 
     tracker = fields.Many2One('project.work.tracker', 'Tracker', states={
             'required': Eval('type') == 'task',
-            }, depends=['type'])
+            })
 
     @classmethod
     def create(cls, vlist):
