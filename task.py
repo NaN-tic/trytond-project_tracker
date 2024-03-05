@@ -26,6 +26,10 @@ class Work(metaclass=PoolMeta):
             'required': Eval('type') == 'task',
             }, depends=['type'])
 
+    @staticmethod
+    def default_tracker():
+        return Transaction().context.get('default_tracker')
+
     @classmethod
     def create(cls, vlist):
         res = super(Work, cls).create(vlist)
