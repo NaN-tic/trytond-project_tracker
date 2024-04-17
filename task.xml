@@ -43,14 +43,14 @@
             <field name="act_window" ref="act_project_tracker"/>
         </record>
         <record model="ir.model.access" id="access_project_tracker">
-            <field name="model" search="[('model', '=', 'project.work.tracker')]"/>
+            <field name="model">project.work.tracker</field>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_project_tracker_admin">
-            <field name="model" search="[('model', '=', 'project.work.tracker')]"/>
+            <field name="model">project.work.tracker</field>
             <field name="group" ref="project.group_project_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
