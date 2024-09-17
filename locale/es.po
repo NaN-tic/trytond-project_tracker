@@ -2,61 +2,33 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:project.work:"
-msgid ""
-"You do not have permissions for setting tracker \"%(tracker)s\" on a task "
-"\"%(task)s\"."
-msgstr ""
-"No dispone de permisos para establecer \"%(tracker)s\" en la tarea "
-"\"%(task)s\"."
-
 msgctxt "field:project.work,tracker:"
 msgid "Tracker"
 msgstr "Tracker"
-
-msgctxt "field:project.work.tracker,active:"
-msgid "Active"
-msgstr "Activo"
 
 msgctxt "field:project.work.tracker,comment:"
 msgid "comment"
 msgstr "comentario"
 
-msgctxt "field:project.work.tracker,create_date:"
-msgid "Create Date"
-msgstr "Fecha creación"
-
-msgctxt "field:project.work.tracker,create_uid:"
-msgid "Create User"
-msgstr "Usuario creación"
-
 msgctxt "field:project.work.tracker,group:"
 msgid "User Group"
 msgstr "Grupo usuario"
-
-msgctxt "field:project.work.tracker,id:"
-msgid "ID"
-msgstr "ID"
 
 msgctxt "field:project.work.tracker,name:"
 msgid "Name"
 msgstr "Nombre"
 
-msgctxt "field:project.work.tracker,rec_name:"
-msgid "Name"
-msgstr "Nombre"
-
-msgctxt "field:project.work.tracker,write_date:"
-msgid "Write Date"
-msgstr "Fecha modificación"
-
-msgctxt "field:project.work.tracker,write_uid:"
-msgid "Write User"
-msgstr "Usuario modificación"
-
 msgctxt "model:ir.action,name:act_project_tracker"
 msgid "Project Tracker"
 msgstr "Proyecto tracker"
+
+msgctxt "model:ir.message,text:invalid_user_tracker"
+msgid ""
+"You do not have permissions for setting tracker \"%(tracker)s\" on a task "
+"\"%(task)s\"."
+msgstr ""
+"\"No dispone de permisos para establecer \"%(tracker)s\" en la tarea "
+"\"%(task)s\"."
 
 msgctxt "model:ir.ui.menu,name:menu_project_tracker"
 msgid "Trackers"
@@ -69,7 +41,3 @@ msgstr "Tarea Tracker"
 msgctxt "view:project.work.tracker:"
 msgid "Comment"
 msgstr "Comentario"
-
-msgctxt "view:project.work.tracker:"
-msgid "Tracker"
-msgstr "Tracker"
